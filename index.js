@@ -19,14 +19,14 @@ const app = express()
 app.use(cors())
 app.use(bodyParser.json())
 
-app.use("/catalog", catalog)
-app.use("/doors", doors)
-app.use("/furniture", furniture)
-app.use("/accessories", accessories)
-app.use("/iron-doors", ironDoors)
-app.use("/proposition", proposition)
-app.use("/filter", filter)
-app.use("/order", order)
+app.use("/api/catalog", catalog)
+app.use("/api/doors", doors)
+app.use("/api/furniture", furniture)
+app.use("/api/accessories", accessories)
+app.use("/api/iron-doors", ironDoors)
+app.use("/api/proposition", proposition)
+app.use("/api/filter", filter)
+app.use("/api/order", order)
 
 app.listen(process.env.PORT, (err) => {
   if (err) throw err
