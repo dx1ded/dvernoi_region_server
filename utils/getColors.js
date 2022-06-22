@@ -4,6 +4,7 @@ export const getColors = async (product, Model) => (
       $match: {
         model: product.model,
         canvas_type: product.canvas_type,
+        size: product.size,
         group: product.group
       }
     },
