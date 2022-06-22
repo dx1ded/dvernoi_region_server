@@ -1,0 +1,21 @@
+{
+  "name": "dvernoi_region_server",
+  "version": "1.0.0",
+  "description": "Server of Dvernoi Region",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "type": "module",
+  "author": "Volodymyr Doskochynskyi <doskovol1@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.4.0",
+    "telegraf": "^4.8.5",
+    "url": "^0.11.0"
+  }
+}
