@@ -3,6 +3,6 @@ import { catalog } from "../services/mongodb.js"
 
 const accessorySchema = new mongoose.Schema({
   _id: mongoose.ObjectId
-}, { collection: "accessory" })
+}, { collection: "accessories" })
 
 export const Accessory = catalog.model("Accessory", accessorySchema)

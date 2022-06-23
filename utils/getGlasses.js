@@ -5,7 +5,7 @@ export const getGlasses = async (product, Model) => (
         model: product.model,
         color: product.color,
         canvas_type: product.canvas_type,
-        group: product.group
+        size: product.size
       }
     },
     {
