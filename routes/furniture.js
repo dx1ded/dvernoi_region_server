@@ -19,14 +19,7 @@ furniture.get("/", async (req, res) => {
       return res.status(404).send("Продукт такой комплектации не найден")
     }
 
-    res.json({
-      product,
-      colors: [{
-        articul: product.articul,
-        name: product.name,
-        color: product.color
-      }]
-    })
+    res.json({ product })
   } catch(_) {
     return res.status(404).send("Не найдено")
   }
@@ -46,14 +39,7 @@ furniture.get("/change", async (req, res) => {
       return res.status(404).send("Продукт такой комплектации не найден")
     }
 
-    res.json({
-      product,
-      colors: [{
-        articul: product.articul,
-        name: product.name,
-        color: product.color
-      }]
-    })
+    res.json({ product })
   } catch(_) {
     return res.status(404).send("Не найдено")
   }
