@@ -3,7 +3,6 @@ export const getSizes = async (product, Model, options = {}) => (
     {
       $match: {
         model: product.model,
-        color: product.color,
         ...options
       }
     },

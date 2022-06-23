@@ -47,7 +47,6 @@ ironDoors.get("/change", async (req, res) => {
     if (
       queryParams.inner_side_color === undefined ||
       queryParams.outer_side_color === undefined ||
-      queryParams.size === undefined ||
       queryParams.model === undefined
     ) {
       return res.status(400).send("Неправильные данные")
@@ -56,7 +55,6 @@ ironDoors.get("/change", async (req, res) => {
     const product = (await IronDoor.find({
       inner_side_color: queryParams.inner_side_color,
       outer_side_color: queryParams.outer_side_color,
-      size: queryParams.size,
       model: queryParams.model
     }))[0]
 

@@ -26,6 +26,7 @@ doors.get("/", async (req, res) => {
     const glasses = await getGlasses(product, Door)
     const sizes = await getSizes(product, Door, {
       canvas_type: product.canvas_type,
+      color: product.color,
       glass: product.glass
     })
 
@@ -55,8 +56,12 @@ doors.get("/change", async (req, res) => {
     }
 
     const colors = await getColors(product, Door)
-    const sizes = await getSizes(product, Door)
     const glasses = await getGlasses(product, Door)
+    const sizes = await getSizes(product, Door, {
+      canvas_type: product.canvas_type,
+      color: product.color,
+      glass: product.glass
+    })
 
     res.json({ product, colors, sizes, glasses })
   } catch(_) {
